@@ -66,6 +66,24 @@ time. Most significant reason for missing implementation is lack of correspondin
 
 ![samples](https://user-images.githubusercontent.com/6065976/143092164-cced2f5f-1af3-42a4-9a71-5dba68df06e7.png)
 
+## DXF standard
+
+The DXF format is poorly documented by Autodesk. The official documentation primarily covers
+high-level, generic concepts, while many critical low-level details are omitted. It is likely that
+Autodesk internally relies on its proprietary DWG format implementation - on which DXF is largely
+based (so the [libredwg](https://www.gnu.org/software/libredwg) project can serve as a useful
+reference in some cases). As a result, determining correct rendering behavior - especially in edge
+cases - can be challenging.
+
+As a reference, I primarily rely on the [Autodesk online viewer](https://viewer.autodesk.com),
+although it occasionally fails to open certain DXF files.
+
+I would also like to acknowledge the [Ezdxf](https://github.com/mozman/ezdxf) project for its
+invaluable work of documenting DXF rendering behavior.
+
+Another useful source of information comes from user reports describing how various CAD applications
+handle rendering in practice.
+
 ## Contributing
 
 Please refer to the [contribution guidelines](CONTRIBUTING.md) for details on how to make pull
